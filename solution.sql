@@ -1,5 +1,6 @@
 -- Этап 1. Создание и заполнение БД
 
+
 /* Созадаем схему raw_data*/
 create schema if not exists raw_data;
 
