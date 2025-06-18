@@ -25,3 +25,39 @@
                                                   price (цена покупки в $ с учетом скидки),
                                                   discount (скидки в %),
                                                   car_color (цвет автомобиля). Колонка получена из колонки auto исходной таблицы sales
+
+Привет Егор.
+Прежде чем наполнять таблицы и писать к ним запросы, хотел бы сначала отправить тебе на проверку новый состав таблиц.
+В скобках к названию таблицы перчисляю её колонки.
+
+Таблица client (customer_id[PK],
+                first_name,
+                last_name,
+                special_marks,    -- такие приписки, как Dr., Mrs., DVM, Jr. и др.
+                phone)
+
+Таблица models (model_id[PK],
+                model,
+                gasoline_consumption)
+Таблица brands (brand_id[PK],
+                brand,
+                model_id[FK])               -- связь с табицей models
+Таблица brands_origin (brand_origin_id[PK],
+                       brand_origin,
+                       brand_id[FK])        -- связь с таблицей brands
+
+Таблица colors (color_id[PK],
+                color)
+
+Таблица invoice (invoice_id[PK],
+                 customer_id[FK],           -- связь с таблицей client
+                 date,
+                 price,
+                 discount,
+                 color_id[FK],              -- связь с таблицей colors
+                 model_id[FK])              -- связь с таблицей models
+
+Снаачала создаю таблицы client, colors и models
+Потом создаю таблицe brands
+Потом brands_origin
+и завершаю invoice
