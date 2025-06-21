@@ -61,3 +61,35 @@
 Потом создаю таблицe brands
 Потом brands_origin
 и завершаю invoice
+
+21.06.2025
+Привет Егор.
+Краткое описание таблиц:
+Таблица countries:  countries_id,
+                    countries
+
+Таблица brands:  brand_id,
+                 brand,
+                 countries_id           -- связь с таблицей countries
+
+Таблица models:  model_id,
+                 model,
+                 brand_id,              -- связиь с таблицей brands
+                 gasoline_consumption
+
+Таблица colors:  color_id,
+                 color
+
+Таблица clients:  customer_id,
+                  first_name,
+                  last_name,
+                  special_marks,
+                  phone
+
+Таблица invoice:  invoice_id,
+                  customer_id,          -- связь с таблицей clients
+                  date,
+                  price,
+                  discount,
+                  color_id,             -- связь с таблицей colors
+                  model_id              -- связь с таблицей models
